@@ -1,0 +1,8 @@
+server:
+  port: 8080
+payment:
+  api:
+    url: localhost:8082
+feign:
+  hystrix:
+    enabled: true
