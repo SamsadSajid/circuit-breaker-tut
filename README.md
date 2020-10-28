@@ -34,7 +34,7 @@ Tuning these numbers are tricky. Things to consider:
 
 ---
 
-![Circuit%20Breaker%20342ebc323df04cd49bc57f0a0875afa4/Hystrix-proxy.png](Circuit%20Breaker%20342ebc323df04cd49bc57f0a0875afa4/Hystrix-proxy.png)
+<img width="1680" alt="Hystrix-proxy" src="https://user-images.githubusercontent.com/51528994/97468517-93670a80-196f-11eb-871f-1dce0fe73f57.png">
 
 Hystrix Proxy class
 
