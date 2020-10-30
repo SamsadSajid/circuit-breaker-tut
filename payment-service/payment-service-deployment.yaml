@@ -1,0 +1,36 @@
+# Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-service
+  labels:
+    app: payment-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: payment-service
+  template:
+    metadata:
+      labels:
+        app: payment-service
+    spec:
+      containers:
+        - name: payment-service
+          image: 201405118/payment-service-app:1.0
+          ports:
+            - containerPort: 8082
+---
+# Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment-spring-boot-k8
+spec:
+  selector:
+    app: payment-service
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8082
+      nodePort: 30001
